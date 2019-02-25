@@ -126,7 +126,7 @@ svg.transition-paths {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    bottom: 5vh; }
+    top: 36vh; }
   #landing #landing-curve {
     position: absolute;
     z-index: -1; }
@@ -184,12 +184,12 @@ svg.transition-paths {
     color: white;
     text-align: center;
     text-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.5);
-    margin-bottom: 0.75rem; }
+    margin-bottom: 0.5rem; }
   #landing h2 {
-    font: 400 30pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif; }
+    font: 400 24pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif; }
   #landing h3 {
-    font: 300 18pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
-    margin-bottom: 2rem; }
+    font: 300 15pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    margin-bottom: 0.5rem; }
   #landing h4 {
     font: 800 18pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif; }
   #landing a {
@@ -197,14 +197,14 @@ svg.transition-paths {
   #landing strong {
     font-weight: 800; }
   #landing .landing-button {
-    margin: 0.5em 0 1em;
+    margin: 0.5em 0 0.5em;
     padding: 0.5em 1.5em;
     background: none;
     color: white;
     border-color: white;
     border-radius: 100em;
     border-width: 2px;
-    font: 600 18pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    font: 600 15pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
     text-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.5);
     box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.5), 0 0.25rem 0.2rem rgba(0, 0, 0, 0.5) inset; }
     #landing .landing-button:hover, #landing .landing-button:active, #landing .landing-button:focus {
@@ -214,12 +214,21 @@ svg.transition-paths {
       background-color: white;
       text-shadow: none;
       box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.5); }
+    @media only screen and (max-width: 575px) {
+      #landing .landing-button {
+        border-radius: 100rem;
+        border-width: 2px;
+        margin-top: 0;
+        margin: 0.25rem;
+        padding: 0.5rem 1.5rem; } }
   #landing .landing-button-highlight {
     -webkit-animation: pulsate 5s infinite;
             animation: pulsate 5s infinite; }
   #landing .landing-button-small {
-    font-size: 14pt; }
+    font-size: 12pt; }
   #landing .landing-social-buttons {
+    top: 0;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

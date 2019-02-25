@@ -181,7 +181,7 @@ svg.transition-paths {
     align-items: center;
     justify-content: center;
     // margin-top: -10em; 
-    bottom: 5vh;
+    top: 36vh;
   }
   #landing-curve {
     position: absolute;
@@ -267,14 +267,14 @@ svg.transition-paths {
     color: white;
     text-align: center;
     text-shadow: $drop-shadow $diffuse-small $on-image;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
   h2 {
-    font: 400 30pt $font-primary;
+    font: 400 24pt $font-primary;
   }
   h3 {
-    font: 300 18pt $font-primary;
-    margin-bottom: 2rem;
+    font: 300 15pt $font-primary;
+    margin-bottom: 0.5rem;
   }
   h4 {
     font: 800 18pt $font-primary;
@@ -288,14 +288,14 @@ svg.transition-paths {
   }
 
   .landing-button {
-    margin: 0.5em 0 1em;
+    margin: 0.5em 0 0.5em;
     padding: 0.5em 1.5em;
     background: none;
     color: white;
     border-color: white;
     border-radius: 100em;
     border-width: 2px;
-    font: 600 18pt $font-primary;
+    font: 600 15pt $font-primary;
     text-shadow: $drop-shadow $diffuse-small $on-image;
     box-shadow: $drop-shadow $diffuse-small $on-image, $drop-shadow $diffuse-small $on-image inset;
 
@@ -306,6 +306,14 @@ svg.transition-paths {
       text-shadow: none;
       box-shadow: $drop-shadow $diffuse-small $on-image;
     }
+
+    @include xs-only {
+      border-radius: 100rem;
+      border-width: 2px;
+      margin-top: 0;
+      margin: 0.25rem;
+      padding: 0.5rem 1.5rem;
+    }
   }
 
   .landing-button-highlight {
@@ -313,11 +321,13 @@ svg.transition-paths {
   }
 
   .landing-button-small {
-    font-size: 14pt;
+    font-size: 12pt;
   }
 
 
   .landing-social-buttons {
+    top: 0;
+    position: relative;
     display: flex;
     justify-content: center;
 
