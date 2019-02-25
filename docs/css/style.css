@@ -112,6 +112,7 @@ svg.transition-paths {
       -ms-flex-pack: center;
           justify-content: center; }
   #landing #landing-content {
+    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -125,7 +126,7 @@ svg.transition-paths {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: -160px; }
+    bottom: 5vh; }
   #landing #landing-curve {
     position: absolute;
     z-index: -1; }
@@ -145,6 +146,9 @@ svg.transition-paths {
   @media only screen and (max-width: 1200px) {
     #landing #gary {
       display: none; } }
+  #landing #landing-background {
+    position: absolute;
+    top: -5vh; }
   #landing #landing-logo {
     position: relative;
     height: 40vh;

@@ -175,11 +175,13 @@ svg.transition-paths {
   align-items: center;
   justify-content: center;
   #landing-content {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -160px; 
+    // margin-top: -10em; 
+    bottom: 5vh;
   }
   #landing-curve {
     position: absolute;
@@ -214,11 +216,18 @@ svg.transition-paths {
   //   background: white;
   //   border-radius: 100px;
   // }
+
+  #landing-background {
+    position: absolute;
+    top: -5vh;
+  }
+
   #landing-logo {
     position: relative;
     height: 40vh;
     width: 100vh;
     max-width: 100vw;
+    // margin-top: -10em; 
     padding: 0px;
     margin-bottom: 2rem;
     /* background: white; */
