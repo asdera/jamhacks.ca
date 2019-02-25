@@ -1,0 +1,33 @@
+{
+  "name": "jamhacks.ca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjamcsclub/jamhacks.ca.git"
+  },
+  "author": "Ethan Guo <ethguo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sjamcsclub/jamhacks.ca/issues"
+  },
+  "homepage": "https://github.com/sjamcsclub/jamhacks.ca#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.1.8",
+    "browser-sync": "^2.18.6",
+    "del": "^2.2.2",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0"
+  },
+  "dependencies": {
+    "gulp": "^4.0.0"
+  }
+}

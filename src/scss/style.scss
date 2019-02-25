@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo|Nunito:300,400,600,800');
+
+// $hue-primary: 255; //degrees
+// $sat-primary: 67%;
+// $color-primary: hsl($hue-primary, $sat-primary, 55%);
+// $color-primary-lighter: hsl($hue-primary, $sat-primary, 67%);
+
+$color-offwhite: #F5F5DC;
+
+$color-primary: #493A98;
+$color-primary-light: lighten($color-primary, 12.5%);
+$color-primary-lighter: lighten($color-primary, 20%);
+$color-primary-lightest: lighten($color-primary, 30%);
+
+$color-secondary: #A1D083;
+$color-secondary-dark: darken($color-secondary, 12.5%);
+
+$color-tertiary: #3B97D4;
+
+$font-primary: "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+
+$font-headings: Baloo, $font-primary;
+
+$drop-shadow: 0 0.25rem;
+$drop-shadow-small: 0 0.2rem;
+$diffuse: 0.5rem;
+$diffuse-small: 0.2rem;
+$on-image: rgba(0,0,0, 0.5);
+$on-color: rgba(0,0,0, 0.3);
+$on-white: rgba(0,0,0, 0.15);
+$on-text: rgba(0,0,0, 0.225);
+
+@mixin md-down {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin sm-down {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin xs-only {
+  @media only screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: $drop-shadow $diffuse-small $on-image;
+    box-shadow: $drop-shadow $diffuse-small $on-image, $drop-shadow $diffuse-small $on-image inset;
+  }
+  15% {
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: $drop-shadow $diffuse-small $on-image;
+    box-shadow: $drop-shadow $diffuse-small $on-image, $drop-shadow $diffuse-small $on-image inset;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.4);
+    text-shadow: none;
+    box-shadow: $drop-shadow $diffuse-small $on-image;
+  }
+  85% {
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: $drop-shadow $diffuse-small $on-image;
+    box-shadow: $drop-shadow $diffuse-small $on-image, $drop-shadow $diffuse-small $on-image inset;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: $drop-shadow $diffuse-small $on-image;
+    box-shadow: $drop-shadow $diffuse-small $on-image, $drop-shadow $diffuse-small $on-image inset;
+  }
+}
+
+html {
+  // overflow: hidden;
+  // width: 100%;
+}
+
+body {
+  // Fix for jumpy effects caused by url bar showing/hiding on Android Chrome.
+  // TODO: Try using screen.height instead of window height in js (See http://stackoverflow.com/a/31330874/1670161).
+  // position: fixed;
+  // overflow-y: scroll;
+  // -webkit-overflow-scrolling: touch;
+  // height: 100%;
+  
+  // background-color: $color-primary-light;
+  font: 13pt $font-primary;
+  line-height: 13pt * 4/3;
+  // overflow: hidden;
+}
+::selection {
+  background-color: $color-primary-lighter;
+}
+
+// .col-4pt5 {
+//   -webkit-box-flex: 0;
+//   -webkit-flex: 0 0 37.5%;
+//   -ms-flex: 0 0 37.5%;
+//   flex: 0 0 37.5%;
+//   max-width: 37.5%;
+// }
+
+
+svg.transition-paths {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  transform: translate3d(0,0,0);
+  // top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none;
+  path.color-path {
+    fill: $color-primary-light;
+  }
+  path.light-path {
+    fill: $color-primary-lighter;
+  }
+  path.white-path {
+    fill: white;
+  }
+  &#landing-transition {
+    z-index: 200;
+  }
+  &#white-transition {
+    z-index: 201;
+  }
+}
+
+
+
+.gal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  z-index: -10;
+}
+
+#bg0 {
+  background-image: url("/img/landing-bg.jpg");
+  display: none;
+}
+
+#bg1 {
+  background-image: url("/img/landing-bg1.jpg");
+  display: none;
+}
+
+#bg2 {
+  background-image: url("/img/landing-bg2.jpg");
+  display: none;
+}
+
+#bg3 {
+  background-image: url("/img/landing-bg3.jpg");
+  display: none;
+}
+
+
+#landing {
+  background-color: $color-primary-light;
+  z-index: 100;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  transform: translate3d(0,0,0);
+  // top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  #landing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -160px; 
+  }
+  #landing-curve {
+    position: absolute;
+    z-index: -1;
+  }
+  #gary {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/img/gary.jpg");
+    border: 25px solid white;
+    border-radius: 100%;
+    left: 100px;
+    bottom: 100px;
+    z-index: 100;
+    display: none;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    #gary {
+      display: none;
+    }
+  }
+
+  // #landing-logo {
+  //   position: relative;
+  //   height: 100vh * 1/4;
+  //   max-width: 50vw;
+  //   margin-bottom: 2rem;
+  //   background: white;
+  //   border-radius: 100px;
+  // }
+  #landing-logo {
+    position: relative;
+    height: 40vh;
+    width: 100vh;
+    max-width: 100vw;
+    padding: 0px;
+    margin-bottom: 2rem;
+    /* background: white; */
+    border-radius: 100px; 
+    z-index: 10;
+  }
+  #landing-medialogo {
+    display: none;
+    position: relative;
+    height: 40vh;
+    max-width: 100vw;
+    padding: 60px;
+    margin-bottom: 2rem;
+    /* background: white; */
+    border-radius: 100px;;
+  }
+  .landing-rects {
+    display: none;
+  }
+  @media only screen and (max-width: 800px) {
+    .landing-curves {
+      display: none;
+    }
+    .landing-rects {
+      display: inline;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    #landing-logo {
+      display: none;
+    }
+    #landing-medialogo {
+      display: inline;
+    }
+  }
+  h2, h3, h4 {
+    color: white;
+    text-align: center;
+    text-shadow: $drop-shadow $diffuse-small $on-image;
+    margin-bottom: 0.75rem;
+  }
+  h2 {
+    font: 400 30pt $font-primary;
+  }
+  h3 {
+    font: 300 18pt $font-primary;
+    margin-bottom: 2rem;
+  }
+  h4 {
+    font: 800 18pt $font-primary;
+  }
+  a {
+    color: $color-secondary;
+    // font-weight: 600;
+  }
+  strong {
+    font-weight: 800;
+  }
+
+  .landing-button {
+    margin: 0.5em 0 1em;
+    padding: 0.5em 1.5em;
+    background: none;
+    color: white;
+    border-color: white;
+    border-radius: 100em;
+    border-width: 2px;
+    font: 600 18pt $font-primary;
+    text-shadow: $drop-shadow $diffuse-small $on-image;
+    box-shadow: $drop-shadow $diffuse-small $on-image, $drop-shadow $diffuse-small $on-image inset;
+
+    &:hover, &:active, &:focus {
+      animation: none;
+      color: $color-primary-light;
+      background-color: white;
+      text-shadow: none;
+      box-shadow: $drop-shadow $diffuse-small $on-image;
+    }
+  }
+
+  .landing-button-highlight {
+    animation: pulsate 5s infinite;
+  }
+
+  .landing-button-small {
+    font-size: 14pt;
+  }
+
+
+  .landing-social-buttons {
+    display: flex;
+    justify-content: center;
+
+    .social-link-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        height: 6rem;
+        width: 6rem;
+        margin: 0rem 1rem 0.25rem;
+      }
+    }
+  }
+
+  // .landing-button {
+  //   margin: 0.5rem;
+  //   width: 100%;
+  //   @include xs-only {
+  //     margin-bottom: 0.25rem;
+  //     width: 40%;
+  //     min-width: 7.5em;
+  //   }
+  //   background: none;
+  //   color: white;
+  //   border-color: white;
+  //   border-radius: 100em;
+  //   border-width: 2px;
+  //   font: 16pt $font-primary;
+  //   text-shadow: $drop-shadow $on-color;
+  //   box-shadow: $drop-shadow $on-color, $drop-shadow $on-color inset;
+  //   &:hover, &:active, &:focus {
+  //     color: $color-primary-light;
+  //     background-color: white;
+  //     border-color: white;
+  //     text-shadow: none;
+  //     box-shadow: $drop-shadow $on-color;
+  //   }
+  // }
+}
+
+.navbar {
+  background-color: $color-primary-lighter;
+  display: none; // fade in by js
+  z-index: 400;
+  position: fixed;
+  top: 0; right: 0; left: 0;
+  padding: 0;
+  box-shadow: $drop-shadow $diffuse $on-text;
+
+  align-items: center;
+
+  .navbar-toggler {
+    color: $color-offwhite;
+
+    margin-left: 0.75rem;
+    border: none;
+    border-radius: none;
+    
+    &.active {
+      background-color: $color-primary-lightest;
+    }
+    &:hover {
+      background-color: $color-primary-lightest;
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='" + $color-offwhite + "' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+  }
+
+  .navbar-brand {
+    float: right;
+    margin-right: 0;
+    padding: 1em 1.5em;
+
+    font-size: inherit;
+    font-weight: 800;
+    color: $color-offwhite;
+    
+    &.active {
+      background-color: $color-primary-lightest;
+    }
+    &:hover {
+      background-color: $color-primary-lightest;
+    }
+  }
+
+  .nav-link {
+    color: $color-offwhite !important;
+    border: none;
+    padding: 1em 1.5em !important;
+    &.active {
+      background-color: $color-primary-lightest;
+    }
+    &:hover {
+      background-color: $color-primary-lightest;
+    }
+  }
+
+  .nav-register {
+    font-weight: 800;
+    // margin-left: auto;
+  }
+
+  @include sm-down {
+    font-size: 12pt !important;
+  }
+}
+
+.page {
+  z-index: 300;
+  position: relative;
+  top: 105vh; right: 0; bottom: 0; left: 0;
+  
+  section {
+    margin-bottom: 12.5vh;
+  }
+
+  h1, h2 {
+    font-size: 40pt;
+    line-height: 40pt * 4/3;
+    text-align: center;
+    font-family: $font-headings;
+  }
+
+  a {
+    color: $color-secondary;
+    font-weight: 600;
+  }
+}
+
+article#on-color {
+  color: $color-offwhite;
+  text-shadow: $drop-shadow-small $diffuse-small $on-white;
+
+  h1, h2 {
+    color: $color-secondary;
+  }
+  h1 {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid $color-secondary;
+    box-shadow: $drop-shadow-small $on-white;
+  }
+}
+
+article#on-white {
+  margin-top: 60vh;
+
+  h1, h2 {
+    color: $color-primary;
+    text-shadow: $drop-shadow-small $on-white;
+  }
+}
+
+
+.tagline, .end-tagline {
+  // font-weight: 300;
+  font-size: 16pt;
+  line-height: 150%;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.end-tagline {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+section.about {
+  .tagline {
+    font-size: 20pt;
+    margin-bottom: 0.5em;
+  }
+  .map-container::before {
+    padding-top: percentage(1 / 1.618);
+  }
+  // .map-container {
+  //   position: relative;
+  //   padding-top: 30px;
+  //   padding-bottom: 50%;
+  //   height: 0;
+  //   overflow: hidden;
+  // }
+  .social-buttons {
+    margin-bottom: 1.5rem;
+
+    .social-link-icon {
+      img {
+        height: 4.8rem;
+        width: 4.8rem;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+section.faq {
+  h3 {
+    font-size: 150%;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+  }
+  p {
+    margin-bottom: 1.5em;
+  }
+  .centered {
+    text-align: center;
+  }
+}
+
+section.schedule {
+  .schedule-table {
+    .row {
+    }
+    .time {
+      padding-top: 0.75em;
+      // border-right: 1px dotted grey;
+      // height: 100%;
+    }
+    .event {
+      flex: 1;
+      min-height: 5em;
+      // height: 100%;
+      padding: 0.5em 1em;
+      margin: 0.25em 0.5em;
+      // margin-bottom: 0.5em;
+      background-color: $color-primary-light;
+      color: white;
+      font-weight: 300;
+
+      .title {
+        font-weight: 800;
+      }
+      .subtitle {
+        font-style: italic;
+      }
+      .location {
+      }
+      &-food {
+        background-color: $color-primary-light;
+      }
+      &-workshop, &-activity {
+        background-color: $color-secondary-dark;
+      }
+    }
+    .schedule-div-time {
+      padding-top: 0.5em;
+    }
+    .schedule-div-hr {
+      height: 25%;
+      border-bottom: 1px solid grey;
+      text-align: center;
+      margin: 0.5em 0.5em;
+      .schedule-div-text {
+        font-size: 13pt;
+        background-color: white;
+        padding: 0 0.5em;
+      }
+    }
+    .schedule-day-title {
+      // font-family: $font-headings;
+      font-size: 20pt;
+      color: $color-primary;
+      // text-shadow: $drop-shadow-small $on-white;
+      font-weight: 800;
+      margin-top: 1.5em;
+      margin-bottom: 0.75em;
+    }
+    #schedule-day-title-first {
+      margin-top: 0.75em;
+    }
+  }
+}
+
+section.sponsors {
+  .sponsors-section {
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    @include md-down {
+      margin-bottom: 2rem;
+    }
+  }
+  .logo {
+    padding: 1.5rem;
+  }
+  h2 {
+    margin-top: 0.5em;
+  }
+}
+
+section.team {
+  .team-member {
+    margin-bottom: 2.5em;
+    flex-grow: 1;
+  }
+  .team-spacer {
+    padding-left: 0;
+    flex-grow: 0.5;
+  }
+  .team-member-photo {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+  }
+  .team-member-name {
+    font-weight: 800;
+    margin-bottom: 0.25em;
+    text-align: center;
+  }
+  .team-member-title {
+    text-align: center;
+  }
+}
+
+footer {
+  text-align: center;
+  .archive-link {
+    color: $color-secondary;
+    border-color: $color-secondary;
+    margin-bottom: 1.5em;
+
+    &:hover, &:active, &:focus {
+      text-decoration: underline;
+      color: $color-secondary;
+      background: none;
+      border-color: $color-secondary;
+      // color: white;
+      // background-color: $color-secondary;
+      // border-color: $color-secondary;
+    }
+  }
+  .copyright {
+    padding-bottom: 2em;
+    margin-bottom: 0;
+  }
+}

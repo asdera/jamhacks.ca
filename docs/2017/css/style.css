@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo|Nunito:300,400,600,800");
+body {
+  font: 13pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+  line-height: 17.33333pt; }
+
+::-moz-selection {
+  background-color: #7e70c8; }
+
+::selection {
+  background-color: #7e70c8; }
+
+#gooey-bg {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  #gooey-bg path.color-path {
+    fill: #6554be; }
+  #gooey-bg path.light-path {
+    fill: #7e70c8; }
+
+#landing {
+  z-index: 300;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  #landing-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  #landing-logo {
+    position: relative;
+    left: 6%;
+    height: 33.33333vh;
+    max-width: 75vw;
+    margin-bottom: 2rem; }
+  #landing h2, #landing h3, #landing h4 {
+    color: white;
+    text-align: center;
+    text-shadow: 0 0.25rem rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.75rem; }
+  #landing h2 {
+    font: 24pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif; }
+  #landing h3 {
+    font: 300 18pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    margin-bottom: 1rem; }
+  #landing h4 {
+    font: 300 18pt "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif; }
+  #landing a {
+    color: #a1d083;
+    font-weight: 600; }
+  #landing .social-link-icon img {
+    height: 5em;
+    width: 5em;
+    margin: 1em; }
+
+#nav-header {
+  background-color: #6554be;
+  display: none;
+  z-index: 400;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0; }
+  #nav-header .nav {
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.225); }
+  #nav-header .nav-tabs {
+    border-bottom: none; }
+  #nav-header .nav-link {
+    color: white;
+    border: none;
+    padding: 1em 1.5em; }
+    #nav-header .nav-link.active {
+      background-color: #7e70c8; }
+  #nav-header .nav-register {
+    font-weight: 800; }
+  @media only screen and (max-width: 767px) {
+    #nav-header {
+      font-size: 12pt; } }
+
+#page {
+  z-index: 100;
+  position: relative;
+  top: 80vh;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  #page section {
+    margin-bottom: 12.5vh; }
+  #page h1, #page h2 {
+    font-size: 40pt;
+    line-height: 53.33333pt;
+    text-align: center;
+    color: #493A98;
+    font-family: Baloo, "Nunito", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    text-shadow: 0 0.2rem rgba(0, 0, 0, 0.15); }
+  #page a {
+    color: #7ebe55;
+    font-weight: 600; }
+  #page .tagline {
+    font-size: 120%;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 1.5em; }
+  #page section#about .tagline {
+    font-size: 150%; }
+  #page section#about .map-container::before {
+    padding-top: 61.8047%; }
+  #page section#faq h3 {
+    font-size: 150%;
+    font-weight: 400;
+    margin-bottom: 0.5em; }
+  #page section#faq p {
+    margin-bottom: 1.5em; }
+  #page section#faq .centered {
+    text-align: center; }
+  #page section#schedule .schedule .time {
+    padding-top: 0.75em; }
+  #page section#schedule .schedule .event {
+    min-height: 5em;
+    padding: 0.5em 1em;
+    margin: 0.25em 0.5em;
+    background-color: #6554be;
+    color: white;
+    font-weight: 300; }
+    #page section#schedule .schedule .event .title {
+      font-weight: 700; }
+    #page section#schedule .schedule .event .subtitle {
+      font-style: italic; }
+    #page section#schedule .schedule .event-workshop {
+      background-color: #7ebe55; }
+  #page section#schedule .schedule .schedule-div {
+    height: 25%;
+    border-bottom: 1px solid grey;
+    text-align: center;
+    margin: 0.5em 0.5em; }
+    #page section#schedule .schedule .schedule-div .schedule-div-text {
+      font-size: 13pt;
+      background-color: white;
+      padding: 0 0.5em; }
+  #page section#sponsors .logo {
+    padding: 1.5rem; }
+  #page section#sponsors .logo-grow {
+    padding: 0.5rem;
+    margin-right: 1rem; }
+  #page section#sponsors .logo-grow-2 {
+    padding: 0rem;
+    margin-right: 1.5rem; }
+  #page section#sponsors h2 {
+    margin-top: 0.5em; }
+  #page footer {
+    margin-top: 20vh; }
+    #page footer .copyright {
+      text-align: center;
+      padding-bottom: 2em;
+      margin-bottom: 0; }

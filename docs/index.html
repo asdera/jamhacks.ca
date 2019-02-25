@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JAMHacks 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6554be">
+    <meta name="theme-color" content="#6554be">
+    <meta name="description" content="Coming back for a third year, JAMHacks 3 is the largest high school hackathon in Waterloo! On May 4-5, we are bringing together 200 students from high schools all over Ontario for a full 24 hours of creating, learning and innovating.">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "name": "JAMHacks 3",
+        "startDate": "2018-04-14T14:00:00-05:00",
+        "endDate": "2018-04-15T20:00:00-05:00",
+        "url": "https://jamhacks.ca/",
+        "image": "https://jamhacks.ca/img/og-image.png",
+        "description": "Coming back for a third year, JAMHacks 3 is the largest high school hackathon in Waterloo! On May 4-5, we are bringing together 200 students from high schools all over Ontario for a full 24 hours of creating, learning and innovating.",
+        "location": {
+          "@type": "Place",
+          "name": "Sir John A. Macdonald Secondary School",
+          "address": "650 Laurelwood Drive, Waterloo, ON N2V 2V1"
+        }
+      }
+    </script>
+    <meta property="og:url" content="https://jamhacks.ca/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JAMHacks 3">
+    <meta property="og:description" content="Coming back for a third year, JAMHacks 3 is the largest high school hackathon in Waterloo! On May 4-5, we are bringing together 200 students from high schools all over Ontario for a full 24 hours of creating, learning and innovating.">
+    <meta property="og:image" content="http://jamhacks.ca/img/og-image.png">
+    <meta property="og:image:alt" content="JAMHacks 3">
+  </head>
+  <body data-spy="scroll" data-target="#navbar" data-offset="10">
+    <div id="landing">
+      <svg id="landing-curve" width="100%" height="100%" viewBox="0 0 10 10" preserveAspectRatio="none">
+        <path class="landing-curves" d="M 0 0 V 7 C 0 0, 10 6, 10 0 Z" stroke-width="0" fill="#FFFFFF" fill-opacity="0.8"></path>
+        <path class="landing-curves" d="M 0 7 C 0 0, 10 6, 10 0 C 10 0, 10 9, 6 10 L 0 10 Z" stroke-width="0" fill="#6554BE" fill-opacity="0.3"></path>
+        <path class="landing-curves" d="M 10 0 C 10 0, 10 9, 6 10 H 10 Z" stroke-width="0" fill="#FFFFFF" fill-opacity="0.8"></path>
+        <rect class="landing-rects" x="0" y="0" width="10" height="3" stroke-width="0" fill="#FFFFFF" fill-opacity="0.8"></rect>
+        <rect class="landing-rects" x="0" y="3" width="10" height="9" stroke-width="0" fill="#6554BE" fill-opacity="0.3"></rect>
+        <rect class="landing-rects" x="0" y="9" width="10" height="10" stroke-width="0" fill="#FFFFFF" fill-opacity="0.8"></rect>
+      </svg>
+      <div id="gary"></div>
+      <div id="landing-content">
+        <div id="landing-background"><img id="landing-medialogo" src="img/negative.svg" alt="JAMHacks"><img id="landing-logo" src="img/JAMHacks.svg" alt="JAMHacks"></div>
+        <h2>May 4&ndash;5, 2018</h2>
+        <h3>Sir John A. Macdonald Secondary School, Waterloo</h3><a class="btn btn-outline btn-lg landing-button landing-button-highlight" href="/register">Register</a><span class="blob-btn__blobs"><span class="blob-btn__blob"></span><span class="blob-btn__blob"></span><span class="blob-btn__blob"></span><span class="blob-btn__blob"></span></span><a class="btn btn-outline btn-lg landing-button landing-button-small" href="/mentor">Register as a mentor</a><span class="blob-btn__blobs"><span class="blob-btn__blob"></span><span class="blob-btn__blob"></span><span class="blob-btn__blob"></span><span class="blob-btn__blob"></span></span>
+        <h4>
+          <div class="landing-social-buttons"><a class="social-link-icon" href="/slack" target="_blank"><img src="/img/slack-icon.png" alt="Slack"><span>Slack</span></a><a class="social-link-icon" href="https://jamhacks2.devpost.com/" target="_blank"><img src="/img/devpost-icon.png" alt="Devpost"><span>Devpost</span></a></div>
+        </h4>
+      </div>
+      <div class="gal" id="bg0"></div>
+      <div class="gal" id="bg1"></div>
+      <div class="gal" id="bg2"></div>
+      <div class="gal" id="bg3"></div>
+    </div>
+    <svg class="transition-paths" id="landing-transition" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+      <path class="light-path" id="path1" d=""></path>
+      <path class="color-path" id="path2" d=""></path>
+    </svg>
+    <svg class="transition-paths" id="white-transition" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+      <path class="light-path" id="path1" d=""></path>
+      <path class="white-path" id="path2" d=""></path>
+    </svg>
+    <nav class="navbar navbar-expand-sm navbar-dark" id="navbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand d-sm-none" href="/register">Register</a>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="navbar-nav mt-2 mt-sm-0">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+          <li class="nav-item nav-register d-none d-sm-block"><a class="nav-link" href="/register">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page">
+      <article id="on-color">
+        <div class="container">
+          <section class="about" id="about">
+            <div class="row justify-content-center">
+              <div class="col">
+                <h1>About</h1>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <p class="tagline">JAMHacks 3 is the largest high school hackathon in Waterloo! On May 4-5, we are bringing together 200 students from high schools all over Ontario for a full 24 hours of creating, learning and innovating.</p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="social-buttons container-fluid">
+                <div class="row justify-content-center"><a class="social-link-icon" href="/slack" target="_blank"><img src="/img/slack-icon.png" alt="Slack"></a><a class="social-link-icon" href="https://www.facebook.com/JAMHacks/" target="_blank"><img src="/img/fb-icon.png" alt="Facebook"></a><a class="social-link-icon" href="https://twitter.com/jam_hacks" target="_blank"><img src="/img/twitter-icon.png" alt="Twitter"></a><a class="social-link-icon" href="https://jamhacks2.devpost.com/" target="_blank"><img src="/img/devpost-icon.png" alt="Devpost"></a></div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-9 col-lg-7">
+                <div class="map-container embed-responsive">
+                  <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11582.034386373409!2d-80.59938464999999!3d43.470855349999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x375a3d40ac31533c!2sSir+John+A.+MacDonald+Secondary+School!5e0!3m2!1sen!2sca!4v1485054414351" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="faq" id="faq">
+            <div class="row justify-content-center">
+              <div class="col">
+                <h1>FAQ</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <h3>What is JAMHacks?</h3>
+                <p>JAMHacks is a <strong>hackathon</strong>&mdash;a 24-hour-long "innovation marathon." You'll work in teams of up to 4 to create an app, game, website, robot, gadget, or whatever your heart desires.</p>
+              </div>
+              <div class="col-md-6">
+                <h3>What else is JAMHacks?</h3>
+                <p>JAMHacks is also a <strong>learnathon</strong>&mdash;We'll be running workshops to guide you through making a software or electronics project, even if you've never coded before!</p>
+              </div>
+              <div class="col-md-6">
+                <h3>What if I don't know how to code?</h3>
+                <p>No problem! A hackathon is a great way to quickly pick up new skills. We'll have workshops and mentors to guide you from your first line of code to writing your own app or website!</p>
+              </div>
+              <div class="col-md-6">
+                <h3>Do I need to have a team?</h3>
+                <p>Nope! We'll have time for team formation at the event, which is a great way to meet cool new people. That said, if you have some friends who are interested, you can definitely form a team ahead of time!</p>
+              </div>
+              <div class="col-md-6">
+                <h3>Can I build a hardware/electronics project?</h3>
+                <p>Absolutely! We'll have a shop open with soldering irons and small components (resistors etc.) for you to use.</p>
+              </div>
+              <div class="col-md-6">
+                <h3>Who can participate?</h3>
+                <p>JAMHacks is open to any high school student in Ontario! You don't need to have any experience!</p>
+              </div>
+              <div class="col-md-6">
+                <h3>Is there any cost?</h3>
+                <p>Nope! The event will be free for all participants thanks to the generous contributions of our sponsors.</p>
+              </div>
+              <div class="col-md-6">
+                <h3>How many people will be accepted?</h3>
+                <p>We should be accepting everyone who registers!</p>
+              </div>
+              <div class="col-md-6">
+                <h3>What should I bring?</h3>
+                <p>You should bring your laptop, phone, charger, a reusable water bottle, sleeping bag, toiletries, and your student card or some other form of ID. We will be providing meals and snacks, and quiet rooms for sleeping!</p>
+              </div>
+              <div class="col-md-6">
+                <h3>What if I'm not a high school student?</h3>
+                <p>We'd love to have you as a mentor! You can <a href="/mentor" target="_blank">register here</a>.</p>
+              </div>
+              <div class="col-md-6">
+                <h3>Is there a code of conduct?</h3>
+                <p>Yes. In short, be respectful to other people. You can read the full version <a href="/conduct" target="_blank">here</a>.</p>
+              </div>
+              <div class="col-md-6">
+                <h3>I have another question.</h3>
+                <p>Feel free to email us at <a href="mailto:hello@jamhacks.ca" target="_blank">hello@jamhacks.ca</a> or send us a message on <a href="https://www.facebook.com/JAMHacks/">Facebook</a>.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+      <article id="on-white">
+        <div class="container">
+          <section class="schedule" id="schedule">
+            <div class="row justify-content-center">
+              <div class="col">
+                <h1>Schedule</h1>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-xl-9">
+                <p class="tagline">Here is the schedule of the weekend! Please plan to arrive between 2:00&#8288;&ndash;&#8288;2:30pm to sign in, find a spot and get settled in.
+                </p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-11 col-xl-9 schedule-table">
+                <div class="row no-gutters">
+                  <div class="col-12">
+                    <div class="schedule-day-title" id="schedule-day-title-first">Saturday May 4</div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">2:00&ndash;2:45pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event">
+                      <div class="title">Sign In</div>
+                      <div class="subtitle"></div>
+                      <div class="location">2nd Floor Foyer</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">3:00&ndash;4:00pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event">
+                      <div class="title">Opening Ceremonies</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Auditorium</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time schedule-div-time">4:00pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="schedule-div-hr"><span class="schedule-div-text">Hacking begins!</span></div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">4:00&ndash;5:00pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event event-workshop">
+                      <div class="title">Web Design 101</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Strawberry (2601)</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">5:00&ndash;6:00pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8 d-flex flex-wrap">
+                    <div class="event event-workshop">
+                      <div class="title">Python 101</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Strawberry (2601)</div>
+                    </div>
+                    <div class="event event-workshop">
+                      <div class="title">Making Chat Bots with Cognitive Services</div>
+                      <div class="subtitle">By Microsoft</div>
+                      <div class="location">Peach (2602)</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">6:00&ndash;7:00pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event event-food">
+                      <div class="title">Dinner</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Cafeteria</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">7:30&ndash;8:30pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8 d-flex flex-wrap">
+                    <div class="event event-workshop">
+                      <div class="title">Python 102</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Strawberry (2601)</div>
+                    </div>
+                    <div class="event event-workshop">
+                      <div class="title">Maps and Apps — Spatial Data with ArcGIS</div>
+                      <div class="subtitle">By Esri</div>
+                      <div class="location">Peach (2602)</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">8:30&ndash;9:30pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8 d-flex flex-wrap">
+                    <div class="event event-workshop">
+                      <div class="title">Web Design 102</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Strawberry (2601)</div>
+                    </div>
+                    <div class="event event-workshop">
+                      <div class="title">Build Serverless Web Apps with Firebase</div>
+                      <div class="subtitle">By Google</div>
+                      <div class="location">Peach (2602)</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">9:30&ndash;10:30pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event event-workshop">
+                      <div class="title">Machine Learning with TensorFlow</div>
+                      <div class="subtitle">By Google</div>
+                      <div class="location">Peach (2602)</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">11:00&ndash;11:45pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event event-activity">
+                      <div class="title">Cup Stacking</div>
+                      <div class="subtitle"></div>
+                      <div class="location">2nd Floor Foyer</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">12:00am</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event event-food">
+                      <div class="title">Midnight Snack</div>
+                      <div class="subtitle"></div>
+                      <div class="location">2nd Floor Foyer</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-12">
+                    <div class="schedule-day-title" id="">Sunday May 5</div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">12:30&ndash;1:00am</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event event-activity">
+                      <div class="title">Werewolf</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Strawberry (2601)</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">8:30&ndash;9:30am</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event event-food">
+                      <div class="title">Breakfast</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Cafeteria</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">10:30&ndash;11:30am</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event event-workshop">
+                      <div class="title">How to Pitch</div>
+                      <div class="subtitle">By Omicron</div>
+                      <div class="location">Strawberry (2601)</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">12:00&ndash;1:00pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event event-food">
+                      <div class="title">Lunch</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Cafeteria</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time schedule-div-time">2:00pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="schedule-div-hr"><span class="schedule-div-text">Submission deadline</span></div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">2:30&ndash;4:00pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event">
+                      <div class="title">Project Showcase and Judging</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Cafeteria</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">4:00&ndash;5:00pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event event-food">
+                      <div class="title">Dinner</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Cafeteria</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3 col-md-2">
+                    <div class="time">5:00&ndash;5:30pm</div>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8">
+                    <div class="event">
+                      <div class="title">Closing Ceremonies</div>
+                      <div class="subtitle"></div>
+                      <div class="location">Auditorium</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-xl-9">
+                <p class="end-tagline">Please arrange to be picked up between 5:30&#8288;&ndash;&#8288;6:00pm!
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="sponsors" id="sponsors">
+            <div class="row justify-content-center">
+              <div class="col">
+                <h1>Sponsors</h1>
+              </div>
+            </div>
+            <div class="row justify-content-center align-items-center">
+              <div class="col-lg-9">
+                <p class="tagline">Interested in sponsoring? Shoot us an email at <a href="mailto:sponsor@jamhacks.ca" target="_blank">sponsor@jamhacks.ca</a>, or check out our <a href="sponsorship.pdf" target="_blank">sponsorship&nbsp;package</a>.
+                </p>
+              </div>
+            </div>
+            <div class="row sponsors-section">
+              <div class="logo col-12 col-lg-9"><img class="img-fluid" src="/img/logos/TechMasters.png" alt="TechMasters"/></div>
+            </div>
+            <div class="row sponsors-section">
+              <div class="logo col-10 col-lg-5"><img class="img-fluid" src="/img/logos/Oxford-Learning.png" alt="Oxford Learning"/></div>
+              <div class="logo col-10 col-lg-5"><img class="img-fluid" src="/img/logos/Rapid-Novor.png" alt="Rapid Novor"/></div>
+              <div class="logo col-10 col-lg-5"><img class="img-fluid" src="/img/logos/The-Hub.png" alt="The Hub" style="padding: 0 5%;"/></div>
+              <div class="logo col-10 col-lg-5"><img class="img-fluid" src="/img/logos/TutorBright.jpg" alt="TutorBright" style="padding: 0 5%;"/></div>
+              <div class="logo col-10 col-lg-5"><img class="img-fluid" src="/img/logos/Waterloo-Engineering.png" alt="University of Waterloo Faculty of Engineering"/></div>
+            </div>
+            <div class="row sponsors-section">
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Balsamiq.png" alt="Balsamiq"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Canada-Learning-Code.png" alt="Canada Learning Code"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Communitech.png" alt="Communitech"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Cloudflare.png" alt="Cloudflare"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Ctrl-V.png" alt="Ctrl V"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/EA.png" alt="EA" style="padding: 0 10%;"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Esri-Canada.png" alt="Esri Canada"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Google.png" alt="Google"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Indico.png" alt="Indico"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Jetbrains.png" alt="Jetbrains" style="padding: 0 10%;"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Lakes-Software.png" alt="Lakes Software"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Lett-Go-Travel.png" alt="Lett Go Travel"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Panago.png" alt="Panago"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Sketch.png" alt="Sketch"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Stem-Labs-Robotics.png" alt="Stem Labs Robotics" style="padding: 0 15%;"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Dot-tech.png" alt=".tech"/></div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col">
+                <h2>Partners</h2>
+              </div>
+            </div>
+            <div class="row sponsors-section">
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Kwartzlab.png" alt="Kwartzlab"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Microsoft.png" alt="Microsoft"/></div>
+              <div class="logo col-6 col-sm-5 col-md-4 col-lg-3"><img class="img-fluid" src="/img/logos/Omicron.png" alt="Omicron" style="padding: 0 5%;"/></div>
+            </div>
+          </section>
+          <section class="team" id="team">
+            <div class="row justify-content-center">
+              <div class="col">
+                <h1>The Team</h1>
+              </div>
+            </div>
+            <div class="row justify-content-center align-items-center">
+              <div class="col-lg-9">
+                <p class="tagline">Meet the people behind JAMHacks 3!</p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-9 col-sm-6 col-md-4 col-lg team-member"><img class="img-fluid rounded-circle team-member-photo" src="/img/team/Ethan.jpg" alt="Ethan Guo" onerror="this.src='/img/team/Blank.png'"/>
+                <div class="team-member-name">Ethan Guo</div>
+                <div class="team-member-title">Lead Organizer</div>
+              </div>
+              <div class="col-9 col-sm-6 col-md-4 col-lg team-member"><img class="img-fluid rounded-circle team-member-photo" src="/img/team/Zach.jpg" alt="Zach Chapman" onerror="this.src='/img/team/Blank.png'"/>
+                <div class="team-member-name">Zach Chapman</div>
+                <div class="team-member-title">Sponsorships</div>
+              </div>
+              <div class="col-9 col-sm-6 col-md-4 col-lg team-member"><img class="img-fluid rounded-circle team-member-photo" src="/img/team/Fred.jpg" alt="Fred Chun" onerror="this.src='/img/team/Blank.png'"/>
+                <div class="team-member-name">Fred Chun</div>
+                <div class="team-member-title">Logistics</div>
+              </div>
+              <div class="col-9 col-sm-6 col-md-4 col-lg team-member"><img class="img-fluid rounded-circle team-member-photo" src="/img/team/Leon.jpg" alt="Leon Fattakhov" onerror="this.src='/img/team/Blank.png'"/>
+                <div class="team-member-name">Leon Fattakhov</div>
+                <div class="team-member-title">Logistics/Food</div>
+              </div>
+              <div class="col-9 col-sm-6 col-md-4 col-lg team-member"><img class="img-fluid rounded-circle team-member-photo" src="/img/team/Bob.jpg" alt="Bob Huang" onerror="this.src='/img/team/Blank.png'"/>
+                <div class="team-member-name">Bob Huang</div>
+                <div class="team-member-title">Finance</div>
+              </div>
+              <div class="w-100 d-none d-lg-block"></div>
+              <div class="col team-spacer d-none d-lg-block"></div>
+              <div class="col-9 col-sm-6 col-md-4 col-lg team-member"><img class="img-fluid rounded-circle team-member-photo" src="/img/team/Hyunzee.jpg" alt="Hyunzee Kim" onerror="this.src='/img/team/Blank.png'"/>
+                <div class="team-member-name">Hyunzee Kim</div>
+                <div class="team-member-title">Promotions</div>
+              </div>
+              <div class="col-9 col-sm-6 col-md-4 col-lg team-member"><img class="img-fluid rounded-circle team-member-photo" src="/img/team/Advait.jpg" alt="Advait Maybhate" onerror="this.src='/img/team/Blank.png'"/>
+                <div class="team-member-name">Advait Maybhate</div>
+                <div class="team-member-title">Hacker Experience</div>
+              </div>
+              <div class="col-9 col-sm-6 col-md-4 col-lg team-member"><img class="img-fluid rounded-circle team-member-photo" src="/img/team/Kyungbin.jpg" alt="Kyungbin Son" onerror="this.src='/img/team/Blank.png'"/>
+                <div class="team-member-name">Kyungbin Son</div>
+                <div class="team-member-title">Promotions</div>
+              </div>
+              <div class="col-9 col-sm-6 col-md-4 col-lg team-member"><img class="img-fluid rounded-circle team-member-photo" src="/img/team/Calder.jpg" alt="Calder White" onerror="this.src='/img/team/Blank.png'"/>
+                <div class="team-member-name">Calder White</div>
+                <div class="team-member-title">Logistics</div>
+              </div>
+              <div class="col team-spacer d-none d-lg-block"></div>
+            </div>
+          </section>
+        </div>
+      </article>
+      <footer>
+        <div class="container">
+          <div class="col"><a class="archive-link btn btn-outline-secondary" href="/2017">2017 Website (Archive)</a>
+            <p class="copyright">&copy; 2019 JAMHacks. Website by Ethan Guo.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha256-rD86dXv7/J2SvI9ebmNi5dSuQdvzzrrN2puPca/ILls=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
